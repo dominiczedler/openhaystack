@@ -63,6 +63,12 @@ Our plugin does not access any other private data such as emails (see [source co
 5. Allow access and restart Mail.
 6. Open a terminal and enter `sudo spctl --master-enable`, which will enable Gatekeeper again.
 
+With the following command it is possible to get the current compatible UUID from Apple Mail, if the latest UUID is not compatible anymore:
+```
+defaults read /System/Applications/Mail.app/Contents/Info.plist PluginCompatibilityUUID
+```
+This has to be added in `OpenHaystackMail/Info.plist`.
+
 ### Usage
 
 **Adding a new accessory.**
